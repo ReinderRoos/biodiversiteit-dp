@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biodiversiteit in prestatiesturing — Delta Pi</title>
+  <link rel="stylesheet" href="assets/dashboard.css" />
+</head>
+<body class="dp-dash" data-plate="d">
+  <header class="dp-top">
+    <div class="dp-top__inner">
+      <div class="dp-top__brand">
+        <img class="dp-top__logo" src="assets/logo.jpg" alt="Delta Pi" />
+        <span class="dp-top__tagline">Samen klaar voor morgen</span>
+      </div>
+      <span class="dp-top__badge">Werkversie</span>
+    </div>
+  </header>
+
+  <main class="dp-main">
+    <p class="dp-kicker">Gesprekstarter · voor de adviseur biodiversiteit</p>
+    <h1>Biodiversiteit in prestatiesturing</h1>
+    <p class="dp-lead">Hoe krijg je biodiversiteit net zo expliciet in assetbesluiten als veiligheid of beschikbaarheid — zonder een apart natuurtraject?</p>
+
+    <section class="dp-section">
+      <h2 class="dp-section__label">Rode draad voor het gesprek</h2>
+      <p class="dp-thread">In jullie AM-sturing wegen prestaties als veiligheid en beschikbaarheid al mee. Biodiversiteit landt vaak nog als <em>extra</em> of <em>te laat</em>. Gebruik <strong>A–C</strong> voor gedeelde taal en spanning; diagnoseer op <strong>D · Jullie pad</strong> waar biodiversiteit bij jullie binnenkomt — zodat je in de <strong>waardematrix</strong> en op het <strong>juiste moment</strong> (meekoppelen of checklist) dezelfde besluittaal spreekt.</p>
+    </section>
+
+    <!-- PLATE A: Keten -->
+    <section class="dp-plate" data-plate-panel="a" hidden>
+      <h2 class="dp-section__label">De besluitlijn — gedeelde taal</h2>
+      <p class="dp-hint">Klik één stap of instap voor de openingsvraag. Uitwerking en casus staan op <strong>Jullie pad</strong>.</p>
+      <div class="dp-flow" aria-label="Vijf stappen met vork naar besluit">
+        <div class="dp-flow__row" role="group" aria-label="Stappen in de besluitlijn">
+          <button type="button" class="dp-step dp-map-toggle" data-map="step" data-step="1" aria-pressed="false"><span class="dp-step__n">1</span><strong>Prestatieopgave</strong><span>wat moet het asset leveren?</span></button>
+          <span class="dp-flow__arrow" aria-hidden="true">→</span>
+          <button type="button" class="dp-step dp-step--accent dp-map-toggle" data-map="step" data-step="2" aria-pressed="false"><span class="dp-step__n">2</span><strong>Biodiversiteit als prestatie</strong><span>zelfde stuurveld, geen aparte bijlage</span></button>
+          <span class="dp-flow__arrow" aria-hidden="true">→</span>
+          <button type="button" class="dp-step dp-map-toggle" data-map="step" data-step="3" aria-pressed="false"><span class="dp-step__n">3</span><strong>Waardematrix</strong><span>ook concurrentie: veiligheid, kosten…</span></button>
+          <span class="dp-flow__arrow" aria-hidden="true">→</span>
+          <button type="button" class="dp-step dp-map-toggle" data-map="step" data-step="4" aria-pressed="false"><span class="dp-step__n">4</span><strong>Prioriteren</strong><span>welke maatregelen wegen zwaarder?</span></button>
+        </div>
+        <p class="dp-flow__fork-label">Juiste moment — twee instappen</p>
+        <div class="dp-flow__fork" role="group" aria-label="Instapmomenten">
+          <button type="button" class="dp-fork-box dp-map-toggle" data-map="fork" data-fork="meekoppel" aria-pressed="false">Meekoppelkans<span>biodiversiteit bij werk dat toch al moet</span></button>
+          <button type="button" class="dp-fork-box dp-map-toggle" data-map="fork" data-fork="checklist" aria-pressed="false">Biodiversiteit-checklist<span>impact bij technische keuze</span></button>
+          <button type="button" class="dp-step dp-step--decision dp-map-toggle" data-map="step" data-step="5" aria-pressed="false"><span class="dp-step__n">5</span><strong>Besluit</strong><span>voorkeur die volgt</span></button>
+        </div>
+      </div>
+      <div class="dp-lens-feedback" id="map-feedback" aria-live="polite"></div>
+    </section>
+
+    <!-- PLATE B: Contrast -->
+    <section class="dp-plate" data-plate-panel="b" hidden>
+      <h2 class="dp-section__label">Bijlage of dezelfde tafel?</h2>
+      <p class="dp-hint">Kies de framing die hier speelt. Markeer daarna op <strong>Jullie pad</strong> waar dat bij jullie landt.</p>
+      <div class="dp-contrast" role="group" aria-label="Twee framings">
+        <button type="button" class="dp-contrast__panel dp-contrast-toggle" data-contrast="bijlage" aria-pressed="false">
+          <span class="dp-contrast__tag">Zo landt biodiversiteit vaak</span>
+          <strong class="dp-contrast__title">Biodiversiteit als bijlage / late toets</strong>
+          <span class="dp-contrast__body">Veiligheid of beschikbaarheid is al besloten. Biodiversiteit komt ernaast of erna — intentie, toets, apart traject.</span>
+        </button>
+        <button type="button" class="dp-contrast__panel dp-contrast__panel--ok dp-contrast-toggle" data-contrast="matrix" aria-pressed="false">
+          <span class="dp-contrast__tag">Waar het heen moet</span>
+          <strong class="dp-contrast__title">Biodiversiteit in de waardematrix</strong>
+          <span class="dp-contrast__body">Zelfde besluittafel als veiligheid en beschikbaarheid. Zelfde stuurmoment — geen aparte bijlage.</span>
+        </button>
+      </div>
+      <p class="dp-flow__mini-label">Gedeelde besluitlijn (compact)</p>
+      <div class="dp-flow dp-flow--compact" id="contrast-chain" aria-hidden="true">
+        <div class="dp-flow__row">
+          <div class="dp-step" data-chain-step="1"><span class="dp-step__n">1</span><strong>Prestatieopgave</strong></div>
+          <span class="dp-flow__arrow">→</span>
+          <div class="dp-step dp-step--accent" data-chain-step="2"><span class="dp-step__n">2</span><strong>Biodiversiteit als prestatie</strong></div>
+          <span class="dp-flow__arrow">→</span>
+          <div class="dp-step" data-chain-step="3"><span class="dp-step__n">3</span><strong>Waardematrix</strong></div>
+          <span class="dp-flow__arrow">→</span>
+          <div class="dp-step" data-chain-step="4"><span class="dp-step__n">4</span><strong>Prioriteren</strong></div>
+          <span class="dp-flow__arrow">→</span>
+          <div class="dp-fork-box" data-chain-fork="both">Meekoppel / checklist</div>
+          <span class="dp-flow__arrow">→</span>
+          <div class="dp-step dp-step--decision" data-chain-step="5"><span class="dp-step__n">5</span><strong>Besluit</strong></div>
+        </div>
+      </div>
+      <div class="dp-lens-feedback" id="contrast-feedback" aria-live="polite"></div>
+    </section>
+
+    <!-- PLATE C: Schaarste -->
+    <section class="dp-plate" data-plate-panel="c" hidden>
+      <h2 class="dp-section__label">De besluitlijn — concurrentie onder druk</h2>
+      <p class="dp-hint">Klik wat hier wint onder druk. Door naar <strong>Jullie pad</strong> voor waardematrix en prioritering.</p>
+      <p class="dp-crumbs" aria-hidden="true">1 → 2 → 3 → 4 → 5</p>
+      <div class="dp-scarce">
+        <div class="dp-scarce__left">
+          <h3 class="dp-scarce__title">Rangorde bij schaarste</h3>
+          <div class="dp-stack" role="group" aria-label="Rangorde-items">
+            <button type="button" class="dp-stack__item dp-stack__item--high dp-scarce-toggle" data-scarce="cat1" aria-pressed="false"><strong>Onomkeerbare natuurschade — cat. 1</strong><span>hoog in de rangorde</span></button>
+            <button type="button" class="dp-stack__item dp-scarce-toggle" data-scarce="cat4" aria-pressed="false"><strong>Overige natuur — vaak cat. 4</strong><span>lager in de rangorde</span></button>
+            <button type="button" class="dp-stack__item dp-stack__item--safety dp-scarce-toggle" data-scarce="safety" aria-pressed="false"><strong>Veiligheid eerst: zicht · vlucht · brand</strong><span>eco-berm alleen daar waar het mag</span></button>
+          </div>
+          <p class="dp-scarce__cap">Onder druk wint niet altijd biodiversiteit.</p>
+        </div>
+        <div class="dp-scarce__right">
+          <h3 class="dp-scarce__title">Juiste moment — twee instappen</h3>
+          <div class="dp-flow__fork dp-flow__fork--solo" role="group" aria-label="Instapmomenten onder druk">
+            <button type="button" class="dp-fork-box dp-scarce-fork" data-fork="meekoppel" aria-pressed="false">Meekoppelkans<span>biodiversiteit bij werk dat toch al moet</span></button>
+            <button type="button" class="dp-fork-box dp-scarce-fork" data-fork="checklist" aria-pressed="false">Biodiversiteit-checklist<span>impact bij technische keuze</span></button>
+            <div class="dp-step dp-step--decision"><span class="dp-step__n">5</span><strong>Besluit</strong><span>voorkeur die volgt</span></div>
+          </div>
+          <p class="dp-scarce__cap">Beide leiden naar Besluit; geen rangorde welke “beter” is.</p>
+        </div>
+      </div>
+      <div class="dp-lens-feedback" id="scarce-feedback" aria-live="polite"></div>
+    </section>
+
+    <!-- PLATE D: Jullie pad -->
+    <section class="dp-plate" data-plate-panel="d" hidden>
+      <h2 class="dp-section__label">Jullie pad — diagnose</h2>
+      <p class="dp-hint">Markeer waar biodiversiteit nu binnenkomt — één of meer stappen. Elke klik opent gespreksstof (casus, vragen). A–C verwijzen hierheen.</p>
+      <div class="dp-path" role="group" aria-label="Markeer stappen waar biodiversiteit binnenkomt">
+        <button type="button" class="dp-path__step" data-step="1" aria-pressed="false"><span class="dp-step__n">1</span><strong>Prestatieopgave</strong><span>wat moet het asset leveren?</span></button>
+        <button type="button" class="dp-path__step" data-step="2" aria-pressed="false"><span class="dp-step__n">2</span><strong>Biodiversiteit als prestatie</strong><span>zelfde stuurveld, geen aparte bijlage</span></button>
+        <button type="button" class="dp-path__step" data-step="3" aria-pressed="false"><span class="dp-step__n">3</span><strong>Waardematrix</strong><span>ook concurrentie: veiligheid, kosten…</span></button>
+        <button type="button" class="dp-path__step" data-step="4" aria-pressed="false"><span class="dp-step__n">4</span><strong>Prioriteren</strong><span>welke maatregelen wegen zwaarder?</span></button>
+        <button type="button" class="dp-path__step" data-step="5" aria-pressed="false"><span class="dp-step__n">5</span><strong>Besluit</strong><span>voorkeur die volgt</span></button>
+      </div>
+
+      <h2 class="dp-section__label">Juiste moment — twee instappen</h2>
+      <p class="dp-hint">Optioneel: markeer hoe biodiversiteit binnenkomt. Beide leiden naar Besluit; geen rangorde welke “beter” is.</p>
+      <div class="dp-flow__fork dp-flow__fork--solo" role="group" aria-label="Markeer meekoppelkans en/of checklist">
+        <button type="button" class="dp-fork-box dp-fork-toggle" data-fork="meekoppel" aria-pressed="false">Meekoppelkans<span>biodiversiteit bij werk dat toch al moet</span></button>
+        <button type="button" class="dp-fork-box dp-fork-toggle" data-fork="checklist" aria-pressed="false">Biodiversiteit-checklist<span>impact bij technische keuze</span></button>
+        <div class="dp-step dp-step--decision"><span class="dp-step__n">5</span><strong>Besluit</strong><span>voorkeur die volgt</span></div>
+      </div>
+
+      <div class="dp-path__feedback" id="path-feedback" aria-live="polite"></div>
+      <button type="button" class="dp-reset" id="path-reset">↻ Opnieuw</button>
+    </section>
+
+    <aside class="dp-note">
+      <strong>Werkversie.</strong> Praatplaat om mee te denken — geen org-specifieke scores, geen dichtgetimmerd advies. Klasse-niveau (RWS, ProRail, waterschap, waterbedrijf).
+    </aside>
+
+    <section class="dp-deck" id="domeinkaarten">
+      <div class="dp-deck__head">
+        <div>
+          <p class="dp-section__label">Verdieping voor aan tafel</p>
+          <h2>Domeinkaarten</h2>
+          <p class="dp-deck__intro">Kies één of twee kaarten die aansluiten bij het domein van je gesprekspartner. Suggesties volgen uit A–D.</p>
+        </div>
+        <details class="dp-tip">
+          <summary>Gesprekstip</summary>
+          <p><strong>D</strong> is de diagnose (waar landt biodiversiteit?). <strong>A</strong> levert de gedeelde taal, <strong>B</strong> de bijlage-framing, <strong>C</strong> de druk onder schaarste — klik daar om door te verwijzen naar D. Pak daarna 1–2 gemarkeerde domeinkaarten.</p>
+        </details>
+      </div>
+
+      <div class="dp-filters" role="toolbar" aria-label="Filter domeinkaarten">
+        <button type="button" class="dp-filter is-active" data-filter="all">Alles</button>
+        <button type="button" class="dp-filter" data-filter="water">Water/droogte</button>
+        <button type="button" class="dp-filter" data-filter="dijken">Dijken</button>
+        <button type="button" class="dp-filter" data-filter="oevers">Oevers/inkoop</button>
+        <button type="button" class="dp-filter" data-filter="spoor">Spoor</button>
+        <button type="button" class="dp-filter" data-filter="kader">Kader/sturing</button>
+      </div>
+      <p class="dp-deck__count"><span id="card-count">9</span> kaarten</p>
+
+      <div class="dp-cards" id="card-grid">
+        <article class="dp-card" data-domain="water">
+          <header class="dp-card__meta"><span class="dp-card__tag">Droogte</span><span class="dp-card__step">Stap 3–4 · Waardematrix en prioriteren</span></header>
+          <p class="dp-card__title">Zelfde water: zout/west · scheepvaart · polder (natuur+agro) — wie heeft voorrang?</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Prioriteren als niet alle prestaties tegelijk haalbaar zijn.</p>
+          <a class="dp-card__src" href="https://platformwow.nl/terugblikken/2026/09/terugkijken-inleiding-infra-dialoog-over-droogte" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="water">
+          <header class="dp-card__meta"><span class="dp-card__tag">Rangorde</span><span class="dp-card__step">Stap 3–4 · Waardematrix en prioriteren</span></header>
+          <p class="dp-card__title">Bij schaarste: onomkeerbare natuurschade in cat.&nbsp;1; overige natuur vaak cat.&nbsp;4 — formele rangorde, geen ‘extra’.</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Formele rangorde discussabel maken zonder biodiversiteit te romantiseren.</p>
+          <a class="dp-card__src" href="https://iplo.nl/thema/water/beheer-watersysteem/verdringingsreeks/" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="water">
+          <header class="dp-card__meta"><span class="dp-card__tag">Waterkwaliteit</span><span class="dp-card__step">Stap 3–4 · Waardematrix en prioriteren</span></header>
+          <p class="dp-card__title">Rivierkreeft raakt waterkwaliteit + oever/NVO: wegvangen of ecosysteemherstel — of beide, en wie betaalt (waterschap/Rijk)?</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Exotenbeheer wegen als waterkwaliteits- en assetkeuze, niet als apart natuurproject.</p>
+          <a class="dp-card__src" href="https://platformwow.nl/terugblikken/2026/10/terugkijken-waterwebinar-aanpak-van-invasieve-rivierkreeften" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="kader">
+          <header class="dp-card__meta"><span class="dp-card__tag">BWM</span><span class="dp-card__step">Stap 2–3 · Prestatie en waardematrix</span></header>
+          <p class="dp-card__title">Als eco bijdraagt aan assetfunctie → in SAMP/bedrijfswaardenmatrix, niet als bijlage.</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Ecologische waarde formuleren als volwaardige assetprestatie.</p>
+          <a class="dp-card__src" href="https://roadmapduurzaamhwbp.nl/wp-content/uploads/2025/03/Factsheet-3-DNa-verkenningsfase-def-opgemaakt.pdf" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="dijken">
+          <header class="dp-card__meta"><span class="dp-card__tag">Dijken</span><span class="dp-card__step">Stap 3–4 · Waardematrix en prioriteren</span></header>
+          <p class="dp-card__title">Beslisboom weegt sterkte · eco-potentie · budget; insecten-optimaal ≠ altijd uitvoerbaar.</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Sterkte, eco-potentie en budget in één afweging zetten.</p>
+          <a class="dp-card__src" href="https://platformwow.nl/terugblikken/2025/10/terugblik-waterwebinar-bloemrijke-dijken" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="oevers">
+          <header class="dp-card__meta"><span class="dp-card__tag">Oevers</span><span class="dp-card__step">Stap 3–4 · Waardematrix en prioriteren</span></header>
+          <p class="dp-card__title">Ladder: natuurlijker → hergebruik → MKI → pas dan staal/beton; waar zit biodiversiteit?</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Biodiversiteit vroeg genoeg meenemen in de keuze tussen alternatieven.</p>
+          <a class="dp-card__src" href="https://platformwow.nl/terugblikken/2025/09/waterwebinar-biobased-oevers-en-circulaire-oeverbescherming" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="spoor">
+          <header class="dp-card__meta"><span class="dp-card__tag">Spoor</span><span class="dp-card__step">Stap 3–4 · Waardematrix en prioriteren</span></header>
+          <p class="dp-card__title">Spoorveiligheid (zicht/vlucht/brand) eerst; eco-berm alleen daar waar het mag — en IenW geeft geen apart biodiversiteitsbudget.</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Biodiversiteit sturen binnen harde veiligheids- en budgetrandvoorwaarden.</p>
+          <a class="dp-card__src" href="https://www.tweedekamer.nl/downloads/document?id=2025D14091" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="oevers">
+          <header class="dp-card__meta"><span class="dp-card__tag">Inkoop</span><span class="dp-card__step">Stap 2–4 · Van prestatie naar prioritering</span></header>
+          <p class="dp-card__title">Biodiversiteit via certificaat/contract in de aanbesteding — sturen in bestek of alleen in intentie?</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Ambitie vertalen naar een toetsbare contract- of inkoopeis.</p>
+          <a class="dp-card__src" href="https://platformwow.nl/terugblikken/2025/05/waterwebinar-kleurkeur-blauw-biodiversiteit-versterken-in-oevers" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+        <article class="dp-card" data-domain="kader">
+          <header class="dp-card__meta"><span class="dp-card__tag">Kader</span><span class="dp-card__step">Stap 2–3 · Prestatie en waardematrix</span></header>
+          <p class="dp-card__title">KPI’s bestaan; vraag is of ze in hetzelfde besluitmoment zitten.</p>
+          <p class="dp-card__challenge"><span>Daagt uit op</span> Bestaande KPI’s verbinden aan het feitelijke besluitmoment.</p>
+          <a class="dp-card__src" href="https://www.stowa.nl/sites/default/files/assets/PUBLICATIES/Publicaties%202024/STOWA_2024-25_Raamwerk-biodiversiteit.pdf" target="_blank" rel="noopener">Bekijk bron ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="dp-questions">
+      <h2 class="dp-section__label">Drie openingsvragen</h2>
+      <ol class="dp-questions__list">
+        <li><span class="dp-questions__n">01</span> Waar in jullie besluitpad komt biodiversiteit nu binnen — en is dat vroeg genoeg om nog te sturen? <em>(→ plaat D)</em></li>
+        <li><span class="dp-questions__n">02</span> Welke prestaties in jullie waardematrix concurreren het hardst met biodiversiteit (veiligheid, beschikbaarheid, kosten, …)? <em>(→ plaat C)</em></li>
+        <li><span class="dp-questions__n">03</span> Wat helpt jullie adviseur biodiversiteit meer: meekoppelen met werk dat toch al moet, of een checklist bij elke technische maatregelkeuze? <em>(→ instappen op D)</em></li>
+      </ol>
+    </section>
+
+    <p class="dp-sources">Achtergrond (niet nodig voor het gesprek): KWR/WUR gidsmodellen assetbesluitvorming; Rli <em>Natuurinclusief Nederland</em> (2022); Naturalis/Alliander besturingsmodel (2024); Naturalis Statusrapport 2026.</p>
+  </main>
+
+  <nav class="dp-tabs" aria-label="Kies plaat">
+    <button type="button" class="dp-tabs__btn" data-plate="a" aria-pressed="false"><span>A</span> Keten</button>
+    <button type="button" class="dp-tabs__btn" data-plate="b" aria-pressed="false"><span>B</span> Contrast</button>
+    <button type="button" class="dp-tabs__btn" data-plate="c" aria-pressed="false"><span>C</span> Schaarste</button>
+    <button type="button" class="dp-tabs__btn is-active" data-plate="d" aria-pressed="true"><span>D</span> Jullie pad</button>
+  </nav>
+
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
